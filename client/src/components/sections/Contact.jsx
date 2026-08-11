@@ -45,7 +45,7 @@ export default function Contact() {
     try {
       const API_URL =
         import.meta.env.VITE_API_URL ||
-        "https://my-portfolio-production-e4dd.up.railway.app";
+        "my-portfolio-production-01e8.up.railway.app";
 
       const res = await fetch(`${API_URL}/api/contact`, {
         method: "POST",
