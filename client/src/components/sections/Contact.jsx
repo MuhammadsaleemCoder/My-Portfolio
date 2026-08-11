@@ -45,13 +45,14 @@ export default function Contact() {
     try {
       const API_URL =
         import.meta.env.VITE_API_URL ||
-        "my-portfolio-production-01e8.up.railway.app";
+        "https://my-portfolio-production-01e8.up.railway.app";
 
       const res = await fetch(`${API_URL}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
       });
+
       const data = await res.json();
       if (res.ok && data.success) {
         setFeedback({ type: "success", text: data.message });
